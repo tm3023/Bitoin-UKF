@@ -8,7 +8,7 @@ dynamics and latent volatility, implemented from scratch in Python.
 The state vector combines two components:
 
 - **Damped oscillator** (4 states): two coupled damped oscillators capturing
-  mean-reverting cyclical dynamics in log-returns — a slow cycle (~30d) and a
+  mean-reverting cyclical dynamics in log-returns, a slow cycle (~30d) and a
   fast cycle (~5d), each with a position and velocity state
 - **Stochastic log-variance** (1 state): models time-varying volatility as a
   latent AR(1) process in log space, approximating a discrete-time stochastic
@@ -17,7 +17,7 @@ The state vector combines two components:
 ### Dual-Observation Fix
 
 The original single-observation design suffered from latent state
-unobservability — the log-variance state was not identifiable from price data
+unobservability, the log-variance state was not identifiable from price data
 alone. This was resolved by augmenting the observation vector with a realised-
 variance proxy (rolling squared returns), giving the filter an independent
 signal on the volatility state and restoring identifiability.

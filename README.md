@@ -98,12 +98,12 @@ MAE lower is better; QLIKE more negative is better; Corr higher is better.
 `*` = best in class. Results from `python benchmark_garch.py` on 5-year live data.
 
 The UKF's correlation advantage is most striking: **0.40 vs 0.25 (EGARCH)**
-— the state-space decomposition tracks vol regime shifts that GARCH one-step
+: the state-space decomposition tracks vol regime shifts that GARCH one-step
 updating consistently lags behind.
 
 ### Plots
 
-**Price history, UKF volatility estimate, and standardised innovations**
+**Price history, UKF volatility estimate and standardised innovations**
 
 ![Price and Volatility](plots/vol_comparison.png)
 
@@ -111,7 +111,7 @@ updating consistently lags behind.
 
 ![Return Fit and OOS Scatter](plots/return_fit.png)
 
-**Innovation diagnostics — QQ, ACF, ARCH test**
+**Innovation diagnostics - QQ, ACF, ARCH test**
 
 ![Diagnostics](plots/diagnostics.png)
 
@@ -136,7 +136,7 @@ mechanism treats outliers as noise and downweights them, preventing the filter
 from updating the log-variance state during the most informative observations.
 
 The correction belongs in the **process noise** (Student-t transitions on
-`h_t`) or in an explicit jump component — not the observation model.
+`h_t`) or in an explicit jump component, not the observation model.
 See `compare_models.py` for the full comparison.
 
 ---
@@ -193,7 +193,7 @@ jupyter notebook ukf_bitcoin_mle.ipynb
 `data_loader.py` defaults to `USE_REAL_DATA = True`, downloading the last
 5 years of BTC-USD daily closes from Yahoo Finance via `yfinance`. Set
 `USE_REAL_DATA = False` to use a synthetic series (calibrated to BTC empirics,
-seeded for reproducibility) — useful for fast iteration when developing the
+seeded for reproducibility): useful for fast iteration when developing the
 model.
 
 ---

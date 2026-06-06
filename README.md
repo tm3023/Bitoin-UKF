@@ -2,7 +2,7 @@
 
 A 5-state Unscented Kalman Filter (UKF) for joint estimation of BTC return
 dynamics and latent volatility. Structural parameters are fitted by Maximum
-Likelihood via Harvey's (1989) Prediction Error Decomposition, and the model
+Likelihood via Harvey's (1989) Prediction Error Decomposition and the model
 is benchmarked against the GARCH family and EWMA on 5 years of live BTC-USD
 data.
 

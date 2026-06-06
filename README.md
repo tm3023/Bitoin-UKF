@@ -104,7 +104,7 @@ USE_REAL_DATA = True
 
 This downloads the last 5 years of BTC-USD daily prices from Yahoo Finance
 via `yfinance` and computes log-returns. The filter and MLE code are
-identical — the only difference is the absence of a `h_true` ground-truth
+identical: the only difference is the absence of a `h_true` ground-truth
 series (unavailable for real data), so the "True vol" line is omitted from
 plots.
 
